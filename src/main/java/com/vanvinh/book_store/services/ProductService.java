@@ -34,7 +34,7 @@ public class ProductService {
         product.setImg(fileName);
         product.setActive(true);
         Product saveProduct = productRepository.save(product);
-        String upLoadDir = "product-images/" + saveProduct.getId();
+        String upLoadDir = "/product-images/" + saveProduct.getId();
         FileUploadUtil.saveFile(upLoadDir, fileName, multipartFile);
         productRepository.save(product);
     }
@@ -52,7 +52,7 @@ public class ProductService {
         if(multipartFile != null && !multipartFile.isEmpty()){
             String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
             existingProduct.setImg(fileName);
-            String upLoadDir = "product-images/" + product.getId();
+            String upLoadDir = "/product-images/" + product.getId();
             FileUploadUtil.saveFile(upLoadDir, fileName, multipartFile);
         }
         productRepository.save(existingProduct);

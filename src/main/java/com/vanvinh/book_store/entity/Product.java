@@ -34,9 +34,9 @@ public class Product {
 
     public String getImagesPath(){
         if(img == null || id == null) return null;
-        return "https://proper-sofa-production.up.railway.app" + "/product-images/" + id + "/" + img;
-
+        return "/client_assets/product-images/" + id + "/" + img;
     }
+    //        https://proper-sofa-production.up.railway.app
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
