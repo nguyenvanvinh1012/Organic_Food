@@ -34,7 +34,7 @@ public class Product {
 
     public String getImagesPath(){
         if(img == null || id == null) return null;
-        return "http://" + System.getenv("IP") + "/product-images/" + id + "/" + img;
+        return "https://proper-sofa-production.up.railway.app/" + "/product-images/" + id + "/" + img;
 
     }
     @ManyToOne
