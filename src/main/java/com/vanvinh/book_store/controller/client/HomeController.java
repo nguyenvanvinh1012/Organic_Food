@@ -29,4 +29,8 @@ public class HomeController {
         model.addAttribute("product_4", productService.getALlProductsByCategoryId(4L));
         return "client/home/index";
     }
+    @GetMapping("contact")
+    public String contact(){
+        return "client/home/contact";
+    }
 }

@@ -107,7 +107,7 @@
                                         <li><a th:href="@{/}">Home</a></li>
                                         <li><a href="#">About</a></li>
                                         <li><a href="/product">Shop</a></li>
-                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="/contact">Contact</a></li>
                                         <li sec:authorize="hasAnyAuthority('ADMIN')"><a th:href="@{/admin}">Admin</a>
                                         </li>
                                         <li sec:authorize="isAuthenticated()"><a style="color:#80B500;">Hello, <span
