@@ -34,7 +34,8 @@ public class Product {
 
     public String getImagesPath(){
         if(img == null || id == null) return null;
-        return "/product-images/" + id + "/" + img;
+        return "http://" + System.getenv("IP") + "/product-images/" + id + "/" + img;
+
     }
     @ManyToOne
     @JoinColumn(name = "category_id")
