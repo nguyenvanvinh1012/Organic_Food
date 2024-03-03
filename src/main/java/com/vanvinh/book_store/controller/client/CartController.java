@@ -204,14 +204,13 @@ public class CartController {
     @GetMapping("/paypal_checkout")
     public String paypalCheckout(HttpSession session){
         try {
-
             //get price
             double totalMoney = cartService.getSumPrice(session);
             double USD  = totalMoney / 23000;
             Payment payment = paypalService.createPayment(USD, "USD",
                     "paypal","sale","Organic Store",
-                    "https://proper-sofa-production.up.railway.app/cart/" + CANCEL_URL,
-                    "https://proper-sofa-production.up.railway.app/cart/" + SUCCESS_URL);
+                    "http://localhost:8080/cart/" + CANCEL_URL,
+                    "http://localhost:8080/cart/" + SUCCESS_URL);
             for(Links link:payment.getLinks()) {
                 if(link.getRel().equals("approval_url")) {
                     return "redirect:"+link.getHref();

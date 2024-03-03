@@ -37,6 +37,9 @@ public class UserService {
     public User getUserbyUserName(String username){
         return  userRepository.findByUsername(username);
     }
+    public User getUserByUserID(Long userID){
+        return  userRepository.getUserByUserID(userID);
+    }
     public void save(User user) {
         user.setPassword(new BCryptPasswordEncoder()
                 .encode(user.getPassword()));

@@ -99,7 +99,7 @@ function addToCart(element, productID) {
     $("#modalProductImg").attr('src', productImg);
     // alert("Added to Cart!: " + productID + "Name: "+productName + "Img: "+productImg);
     $.ajax({
-        url: '/add-to-cart/' + productID + "/" + quantity,
+            url: '/add-to-cart/' + productID + "/" + quantity,
         type: 'GET',
         success: function () {
             updateQuantity();

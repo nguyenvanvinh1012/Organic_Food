@@ -43,4 +43,22 @@ public class OrderService {
         Pageable pageable = PageRequest.of(pageNo - 1, pageSize);
         return this.orderRepository.findAll(pageable);
     }
+    public double getTotalSales(){
+        double sum = 0;
+        for (Orders temp : orderRepository.findAll()){
+            if(temp.getStatus_order().getId() == 3){
+                sum = sum + temp.getTotal_money();
+            }
+        }
+        return  sum;
+    }
+    public int getOrderDelivery(){
+        int sum = 0;
+        for (Orders temp : orderRepository.findAll()){
+            if(temp.getStatus_order().getId() == 3){
+                sum++;
+            }
+        }
+        return sum;
+    }
 }

@@ -226,10 +226,10 @@
                       <div class="product-info">
                         <div th:if="${product.averageRating == 0}" class="product-ratting">
                           <ul>
-                            <li><a href="#"><i class="fas fa-star"></i></a></li>
-                            <li><a href="#"><i class="fas fa-star"></i></a></li>
-                            <li><a href="#"><i class="fas fa-star"></i></a></li>
-                            <li><a href="#"><i class="fas fa-star"></i></a></li>
+                            <li><a href="#"><i class="far fa-star"></i></a></li>
+                            <li><a href="#"><i class="far fa-star"></i></a></li>
+                            <li><a href="#"><i class="far fa-star"></i></a></li>
+                            <li><a href="#"><i class="far fa-star"></i></a></li>
                             <li><a href="#"><i class="far fa-star"></i></a></li>
                             <li class="review-total"> <a href="#"> (0)</a></li>
                           </ul>
@@ -238,6 +238,9 @@
                           <ul>
                             <li th:each="i : ${#numbers.sequence(1, product.averageRating)}">
                               <a href="#"><i class="fas fa-star"></i></a>
+                            </li>
+                            <li th:if="${5 - product.averageRating > 0}" th:each="i : ${#numbers.sequence(1, 5 - product.averageRating)}">
+                              <a href="#"><i class="far fa-star"></i></a>
                             </li>
                             <li class="review-total"> <a href="#"> (<span th:text="${product.totalComments}"></span>)</a></li>
                           </ul>
@@ -293,10 +296,10 @@
                       <div class="product-info">
                         <div th:if="${product.averageRating == 0}" class="product-ratting">
                           <ul>
-                            <li><a href="#"><i class="fas fa-star"></i></a></li>
-                            <li><a href="#"><i class="fas fa-star"></i></a></li>
-                            <li><a href="#"><i class="fas fa-star"></i></a></li>
-                            <li><a href="#"><i class="fas fa-star"></i></a></li>
+                            <li><a href="#"><i class="far fa-star"></i></a></li>
+                            <li><a href="#"><i class="far fa-star"></i></a></li>
+                            <li><a href="#"><i class="far fa-star"></i></a></li>
+                            <li><a href="#"><i class="far fa-star"></i></a></li>
                             <li><a href="#"><i class="far fa-star"></i></a></li>
                             <li class="review-total"> <a href="#"> (0)</a></li>
                           </ul>
@@ -305,6 +308,9 @@
                           <ul>
                             <li th:each="i : ${#numbers.sequence(1, product.averageRating)}">
                               <a href="#"><i class="fas fa-star"></i></a>
+                            </li>
+                            <li th:if="${5 - product.averageRating > 0}" th:each="i : ${#numbers.sequence(1, 5 - product.averageRating)}">
+                              <a href="#"><i class="far fa-star"></i></a>
                             </li>
                             <li class="review-total"> <a href="#"> (<span th:text="${product.totalComments}"></span>)</a></li>
                           </ul>
@@ -361,10 +367,10 @@
                       <div class="product-info">
                         <div th:if="${product.averageRating == 0}" class="product-ratting">
                           <ul>
-                            <li><a href="#"><i class="fas fa-star"></i></a></li>
-                            <li><a href="#"><i class="fas fa-star"></i></a></li>
-                            <li><a href="#"><i class="fas fa-star"></i></a></li>
-                            <li><a href="#"><i class="fas fa-star"></i></a></li>
+                            <li><a href="#"><i class="far fa-star"></i></a></li>
+                            <li><a href="#"><i class="far fa-star"></i></a></li>
+                            <li><a href="#"><i class="far fa-star"></i></a></li>
+                            <li><a href="#"><i class="far fa-star"></i></a></li>
                             <li><a href="#"><i class="far fa-star"></i></a></li>
                             <li class="review-total"> <a href="#"> (0)</a></li>
                           </ul>
@@ -373,6 +379,9 @@
                           <ul>
                             <li th:each="i : ${#numbers.sequence(1, product.averageRating)}">
                               <a href="#"><i class="fas fa-star"></i></a>
+                            </li>
+                            <li th:if="${5 - product.averageRating > 0}" th:each="i : ${#numbers.sequence(1, 5 - product.averageRating)}">
+                              <a href="#"><i class="far fa-star"></i></a>
                             </li>
                             <li class="review-total"> <a href="#"> (<span th:text="${product.totalComments}"></span>)</a></li>
                           </ul>
@@ -428,10 +437,10 @@
                       <div class="product-info">
                         <div th:if="${product.averageRating == 0}" class="product-ratting">
                           <ul>
-                            <li><a href="#"><i class="fas fa-star"></i></a></li>
-                            <li><a href="#"><i class="fas fa-star"></i></a></li>
-                            <li><a href="#"><i class="fas fa-star"></i></a></li>
-                            <li><a href="#"><i class="fas fa-star"></i></a></li>
+                            <li><a href="#"><i class="far fa-star"></i></a></li>
+                            <li><a href="#"><i class="far fa-star"></i></a></li>
+                            <li><a href="#"><i class="far fa-star"></i></a></li>
+                            <li><a href="#"><i class="far fa-star"></i></a></li>
                             <li><a href="#"><i class="far fa-star"></i></a></li>
                             <li class="review-total"> <a href="#"> (0)</a></li>
                           </ul>
@@ -440,6 +449,9 @@
                           <ul>
                             <li th:each="i : ${#numbers.sequence(1, product.averageRating)}">
                               <a href="#"><i class="fas fa-star"></i></a>
+                            </li>
+                            <li th:if="${5 - product.averageRating > 0}" th:each="i : ${#numbers.sequence(1, 5 - product.averageRating)}">
+                              <a href="#"><i class="far fa-star"></i></a>
                             </li>
                             <li class="review-total"> <a href="#"> (<span th:text="${product.totalComments}"></span>)</a></li>
                           </ul>
@@ -476,7 +488,7 @@
               <h6 class="ltn__secondary-color">Todays Hot Deals</h6>
               <h1 class="section-title">Original Stock Honey <br>  Combo Package</h1>
             </div>
-            <div class="ltn__countdown ltn__countdown-3 bg-white--" data-countdown="2023/12/28"></div>
+            <div class="ltn__countdown ltn__countdown-3 bg-white--" data-countdown="2024/3/20"></div>
             <div class="btn-wrapper animated">
               <a href="/product" class="theme-btn-1 btn btn-effect-1 text-uppercase">Shop now</a>
             </div>
@@ -487,66 +499,6 @@
   </div>
   <!-- COUNTDOWN AREA END -->
 
-  <!-- IMAGE SLIDER AREA START (img-slider-2) -->
-  <div style="margin-top: 20px" class="ltn__img-slider-area ltn__img-slider-2 section-bg-1 pt-115 pb-90">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="section-title-area ltn__section-title-2 text-center">
-            <h6 class="section-subtitle ltn__secondary-color">//  Portfolio</h6>
-            <h1 class="section-title">We Have Done<span>.</span></h1>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row ltn__image-slider-2-active slick-arrow-1 slick-arrow-1-inner">
-        <div class="col-lg-12">
-          <div class="ltn__img-slide-item-2">
-            <a href="client_assets/img/img-slide/1.jpg" data-rel="lightcase:myCollection">
-              <img src="client_assets/img/img-slide/1.jpg" alt="Image">
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="ltn__img-slide-item-2">
-            <a href="client_assets/img/img-slide/2.jpg" data-rel="lightcase:myCollection">
-              <img src="client_assets/img/img-slide/2.jpg" alt="Image">
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="ltn__img-slide-item-2">
-            <a href="client_assets/img/img-slide/3.jpg" data-rel="lightcase:myCollection">
-              <img src="client_assets/img/img-slide/3.jpg" alt="Image">
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="ltn__img-slide-item-2">
-            <a href="client_assets/img/img-slide/4.jpg" data-rel="lightcase:myCollection">
-              <img src="client_assets/img/img-slide/4.jpg" alt="Image">
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="ltn__img-slide-item-2">
-            <a href="client_assets/img/img-slide/1.jpg" data-rel="lightcase:myCollection">
-              <img src="client_assets/img/img-slide/1.jpg" alt="Image">
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="ltn__img-slide-item-2">
-            <a href="client_assets/img/img-slide/2.jpg" data-rel="lightcase:myCollection">
-              <img src="client_assets/img/img-slide/2.jpg" alt="Image">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- IMAGE SLIDER AREA END -->
 
   <!-- BLOG AREA START (blog-3) -->
   <div class="ltn__blog-area pt-115 pb-70">
@@ -559,156 +511,31 @@
         </div>
       </div>
       <div class="row  ltn__blog-slider-one-active slick-arrow-1 ltn__blog-item-3-normal">
-        <!-- Blog Item -->
-        <div class="col-lg-12">
+        <div th:each="blog : ${blogs}"  class="col-lg-12">
           <div class="ltn__blog-item ltn__blog-item-3">
             <div class="ltn__blog-img">
-              <a href="blog-details.html"><img src="client_assets/img/blog/1.jpg" alt="#"></a>
+              <a  th:href="@{/blog/detail/{id}(id=${blog.id})}"><img th:src="@{${blog.imagesPath}}" alt="#"></a>
             </div>
             <div class="ltn__blog-brief">
               <div class="ltn__blog-meta">
                 <ul>
                   <li class="ltn__blog-author">
-                    <a href="#"><i class="far fa-user"></i>by: Admin</a>
+                    <a href="#"><i class="far fa-user"></i>by: <span th:text="${blog.user.getFull_name()}"></span> </a>
                   </li>
                   <li class="ltn__blog-tags">
                     <a href="#"><i class="fas fa-tags"></i>Services</a>
                   </li>
                 </ul>
               </div>
-              <h3 class="ltn__blog-title"><a href="blog-details.html">Common Engine Oil Problems and Solutions</a></h3>
+              <h3 class="ltn__blog-title"><a th:href="@{/blog/detail/{id}(id=${blog.id})}" th:text="${blog.name}"></a></h3>
               <div class="ltn__blog-meta-btn">
                 <div class="ltn__blog-meta">
                   <ul>
-                    <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>June 24, 2020</li>
+                    <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i><span th:text="${#dates.format(blog.dateTime, 'MMMM d, yyyy')}"></span></li>
                   </ul>
                 </div>
                 <div class="ltn__blog-btn">
-                  <a href="blog-details.html">Read more</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Blog Item -->
-        <div class="col-lg-12">
-          <div class="ltn__blog-item ltn__blog-item-3">
-            <div class="ltn__blog-img">
-              <a href="blog-details.html"><img src="client_assets/img/blog/2.jpg" alt="#"></a>
-            </div>
-            <div class="ltn__blog-brief">
-              <div class="ltn__blog-meta">
-                <ul>
-                  <li class="ltn__blog-author">
-                    <a href="#"><i class="far fa-user"></i>by: Admin</a>
-                  </li>
-                  <li class="ltn__blog-tags">
-                    <a href="#"><i class="fas fa-tags"></i>Services</a>
-                  </li>
-                </ul>
-              </div>
-              <h3 class="ltn__blog-title"><a href="blog-details.html">How and when to replace brake rotors</a></h3>
-              <div class="ltn__blog-meta-btn">
-                <div class="ltn__blog-meta">
-                  <ul>
-                    <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>July 23, 2020</li>
-                  </ul>
-                </div>
-                <div class="ltn__blog-btn">
-                  <a href="blog-details.html">Read more</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Blog Item -->
-        <div class="col-lg-12">
-          <div class="ltn__blog-item ltn__blog-item-3">
-            <div class="ltn__blog-img">
-              <a href="blog-details.html"><img src="client_assets/img/blog/3.jpg" alt="#"></a>
-            </div>
-            <div class="ltn__blog-brief">
-              <div class="ltn__blog-meta">
-                <ul>
-                  <li class="ltn__blog-author">
-                    <a href="#"><i class="far fa-user"></i>by: Admin</a>
-                  </li>
-                  <li class="ltn__blog-tags">
-                    <a href="#"><i class="fas fa-tags"></i>Services</a>
-                  </li>
-                </ul>
-              </div>
-              <h3 class="ltn__blog-title"><a href="blog-details.html">Elenance, Servicing & Repairs</a></h3>
-              <div class="ltn__blog-meta-btn">
-                <div class="ltn__blog-meta">
-                  <ul>
-                    <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>August 22, 2020</li>
-                  </ul>
-                </div>
-                <div class="ltn__blog-btn">
-                  <a href="blog-details.html">Read more</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Blog Item -->
-        <div class="col-lg-12">
-          <div class="ltn__blog-item ltn__blog-item-3">
-            <div class="ltn__blog-img">
-              <a href="blog-details.html"><img src="client_assets/img/blog/4.jpg" alt="#"></a>
-            </div>
-            <div class="ltn__blog-brief">
-              <div class="ltn__blog-meta">
-                <ul>
-                  <li class="ltn__blog-author">
-                    <a href="#"><i class="far fa-user"></i>by: Admin</a>
-                  </li>
-                  <li class="ltn__blog-tags">
-                    <a href="#"><i class="fas fa-tags"></i>Services</a>
-                  </li>
-                </ul>
-              </div>
-              <h3 class="ltn__blog-title"><a href="blog-details.html">Healthiest Vegetables on Earth</a></h3>
-              <div class="ltn__blog-meta-btn">
-                <div class="ltn__blog-meta">
-                  <ul>
-                    <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>June 24, 2020</li>
-                  </ul>
-                </div>
-                <div class="ltn__blog-btn">
-                  <a href="blog-details.html">Read more</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Blog Item -->
-        <div class="col-lg-12">
-          <div class="ltn__blog-item ltn__blog-item-3">
-            <div class="ltn__blog-img">
-              <a href="blog-details.html"><img src="client_assets/img/blog/5.jpg" alt="#"></a>
-            </div>
-            <div class="ltn__blog-brief">
-              <div class="ltn__blog-meta">
-                <ul>
-                  <li class="ltn__blog-author">
-                    <a href="#"><i class="far fa-user"></i>by: Admin</a>
-                  </li>
-                  <li class="ltn__blog-tags">
-                    <a href="#"><i class="fas fa-tags"></i>Services</a>
-                  </li>
-                </ul>
-              </div>
-              <h3 class="ltn__blog-title"><a href="blog-details.html">How te Your Tires Last Longer</a></h3>
-              <div class="ltn__blog-meta-btn">
-                <div class="ltn__blog-meta">
-                  <ul>
-                    <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>June 24, 2020</li>
-                  </ul>
-                </div>
-                <div class="ltn__blog-btn">
-                  <a href="blog-details.html">Read more</a>
+                  <a th:href="@{/blog/detail/{id}(id=${blog.id})}">Read more</a>
                 </div>
               </div>
             </div>

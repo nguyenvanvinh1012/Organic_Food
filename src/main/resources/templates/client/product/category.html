@@ -88,12 +88,13 @@
                           <div th:if="${product.averageRating == 0}" class="product-ratting">
                             <ul>
                               <li>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
-                                <a href="#"><i class="fas fa-star"></i></a>
+                                <a href="#"><i class="far fa-star"></i></a>
+                                <a href="#"><i class="far fa-star"></i></a>
+                                <a href="#"><i class="far fa-star"></i></a>
+                                <a href="#"><i class="far fa-star"></i></a>
+                                <a href="#"><i class="far fa-star"></i></a>
                               </li>
+                              <li class="review-total"> <a href="#">(0)</a></li>
                             </ul>
                           </div>
                           <div th:if="${product.averageRating != 0}" class="product-ratting">
@@ -101,6 +102,10 @@
                               <li th:each="i : ${#numbers.sequence(1, product.averageRating)}">
                                 <a href="#"><i class="fas fa-star"></i></a>
                               </li>
+                              <li th:if="${5 - product.averageRating > 0}" th:each="i : ${#numbers.sequence(1, 5 - product.averageRating)}">
+                                <a href="#"><i class="far fa-star"></i></a>
+                              </li>
+                              <li class="review-total"> <a href="#"> (<span th:text="${product.totalComments}"></span>)</a></li>
                             </ul>
                           </div>
                           <h2 class="product-title"><a th:href="@{/product/detail/{id}(id=${product.id})}"th:text="${product.name}"></a></h2>

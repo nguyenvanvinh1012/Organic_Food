@@ -48,14 +48,21 @@ public class User{
     private String img;
     @Column(name = "provider", length = 50)
     private String provider;
+
     @ManyToMany
     @JoinTable(name = "user_role",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
+
     @OneToMany(mappedBy = "user")
     private List<Orders> orders = new ArrayList<>();
+
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
     @JsonIgnore
     private List<Comment> comments = new ArrayList<>();
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<Blog> blogs;
 }

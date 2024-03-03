@@ -62,11 +62,11 @@
                                     <div th:if="${average_rating == 0}" class="product-ratting">
                                         <ul>
                                             <li>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
+                                                <a href="#"><i class="far fa-star"></i></a>
+                                                <a href="#"><i class="far fa-star"></i></a>
+                                                <a href="#"><i class="far fa-star"></i></a>
+                                                <a href="#"><i class="far fa-star"></i></a>
+                                                <a href="#"><i class="far fa-star"></i></a>
                                             </li>
                                             <li class="review-total"><a href="#"> ( <span th:text="${total_comments}"></span> Reviews)</a></li>
                                         </ul>
@@ -75,6 +75,9 @@
                                         <ul>
                                             <li th:each="i : ${#numbers.sequence(1, average_rating)}">
                                                 <a href="#"><i class="fas fa-star"></i></a>
+                                            </li>
+                                            <li th:if="${5 - product.averageRating > 0}" th:each="i : ${#numbers.sequence(1, 5 - product.averageRating)}">
+                                                <a href="#"><i class="far fa-star"></i></a>
                                             </li>
                                             <li class="review-total"><a href="#"> ( <span th:text="${total_comments}"></span> Reviews)</a></li>
                                         </ul>
@@ -174,11 +177,11 @@
                                     <div th:if="${average_rating == 0}" class="product-ratting">
                                         <ul>
                                             <li>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
+                                                <a href="#"><i class="far fa-star"></i></a>
+                                                <a href="#"><i class="far fa-star"></i></a>
+                                                <a href="#"><i class="far fa-star"></i></a>
+                                                <a href="#"><i class="far fa-star"></i></a>
+                                                <a href="#"><i class="far fa-star"></i></a>
                                             </li>
                                             <li class="review-total"><a href="#"> ( <span th:text="${total_comments}"></span> Reviews)</a></li>
                                         </ul>
@@ -187,6 +190,9 @@
                                         <ul>
                                             <li th:each="i : ${#numbers.sequence(1, average_rating)}">
                                                 <a href="#"><i class="fas fa-star"></i></a>
+                                            </li>
+                                            <li th:if="${5 - product.averageRating > 0}" th:each="i : ${#numbers.sequence(1, 5 - product.averageRating)}">
+                                                <a href="#"><i class="far fa-star"></i></a>
                                             </li>
                                             <li class="review-total"><a href="#"> ( <span th:text="${total_comments}"></span> Reviews)</a></li>
                                         </ul>
@@ -273,12 +279,13 @@
                                             <div th:if="${temp.averageRating == 0}" class="product-ratting">
                                                 <ul>
                                                     <li>
-                                                        <a href="#"><i class="fas fa-star"></i></a>
-                                                        <a href="#"><i class="fas fa-star"></i></a>
-                                                        <a href="#"><i class="fas fa-star"></i></a>
-                                                        <a href="#"><i class="fas fa-star"></i></a>
-                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                        <a href="#"><i class="far fa-star"></i></a>
+                                                        <a href="#"><i class="far fa-star"></i></a>
+                                                        <a href="#"><i class="far fa-star"></i></a>
+                                                        <a href="#"><i class="far fa-star"></i></a>
+                                                        <a href="#"><i class="far fa-star"></i></a>
                                                     </li>
+                                                    <li class="review-total"> <a href="#"> (0)</a></li>
                                                 </ul>
                                             </div>
                                             <div th:if="${temp.averageRating != 0}" class="product-ratting">
@@ -286,6 +293,10 @@
                                                     <li th:each="i : ${#numbers.sequence(1, temp.averageRating)}">
                                                         <a href="#"><i class="fas fa-star"></i></a>
                                                     </li>
+                                                    <li th:if="${5 - temp.averageRating > 0}" th:each="i : ${#numbers.sequence(1, 5 - temp.averageRating)}">
+                                                        <a href="#"><i class="far fa-star"></i></a>
+                                                    </li>
+                                                    <li class="review-total"> <a href="#"> (<span th:text="${temp.totalComments}"></span>)</a></li>
                                                 </ul>
                                             </div>
                                             <h6><a th:href="@{/product/detail/{id}(id=${temp.id})}" th:text="${temp.name}"></a></h6>
@@ -362,11 +373,12 @@
                         <div class="product-info">
                             <div th:if="${temp.averageRating == 0}" class="product-ratting">
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
                                     <li><a href="#"><i class="far fa-star"></i></a></li>
                                     <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    <li><a href="#"><i class="far fa-star"></i></a></li>
+                                    <li class="review-total"> <a href="#">(0)</a></li>
                                 </ul>
                             </div>
                             <div th:if="${temp.averageRating != 0}" class="product-ratting">
@@ -374,6 +386,10 @@
                                     <li th:each="i : ${#numbers.sequence(1, temp.averageRating)}">
                                         <a href="#"><i class="fas fa-star"></i></a>
                                     </li>
+                                    <li th:if="${5 - temp.averageRating > 0}" th:each="i : ${#numbers.sequence(1, 5 - temp.averageRating)}">
+                                        <a href="#"><i class="far fa-star"></i></a>
+                                    </li>
+                                    <li class="review-total"> <a href="#"> (<span th:text="${temp.totalComments}"></span>)</a></li>
                                 </ul>
                             </div>
                             <h2 class="product-title"><a th:href="@{/product/detail/{id}(id=${temp.id})}"

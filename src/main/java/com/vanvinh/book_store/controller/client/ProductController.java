@@ -56,18 +56,6 @@ public class ProductController {
             }
         }
         if(product != null){
-//            double averageRating;
-//            int totalRating = 0;
-//            int totalComments = product.getComments().size();
-//            for(Comment comment: product.getComments())
-//                totalRating += comment.getRating_value();
-//
-//            if(totalComments == 0)
-//                averageRating = 0;
-//            else
-//                averageRating = totalRating / totalComments;
-//            int totalRating2 = product.getAverageRating();
-//            int totalComments2 = product.getTotalComments();
 
             model.addAttribute("total_comments", product.getTotalComments());
             model.addAttribute("average_rating", product.getAverageRating());

@@ -26,4 +26,16 @@ public class EmailSenderService {
         helper.addInline("logoImage", resource) ;
         mailSender.send(message);
     }
+    public void sendEmailContact(String fromEmail, String subject, String body) throws MessagingException, UnsupportedEncodingException {
+        MimeMessage message = mailSender.createMimeMessage();
+        MimeMessageHelper helper = new MimeMessageHelper(message, true);
+        helper.setFrom(fromEmail);
+        helper.setTo("nguyenvanvinhisco22@gmail.com");
+        helper.setSubject(subject);
+        body += "<hr><img src ='cid:logoImage' />";
+        helper.setText(body, true);
+        ClassPathResource resource = new ClassPathResource("/static/client_assets/img/logo.png");
+        helper.addInline("logoImage", resource) ;
+        mailSender.send(message);
+    }
 }

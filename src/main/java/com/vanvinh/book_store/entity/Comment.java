@@ -27,4 +27,7 @@ public class Comment {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id",referencedColumnName = "id")
     private User user;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "blog_id",referencedColumnName = "id")
+    private Blog blog;
 }
